@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@color/cinza"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LuaActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:src="@drawable/lua"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A temperatura na Lua varia drasticamente, pois não há atmosfera. O lado iluminado pode chegar a 127 °C, enquanto o lado escuro pode cair para -173 °C."
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A distância média é de aproximadamente 384.400 quilômetros."
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+
+</LinearLayout>

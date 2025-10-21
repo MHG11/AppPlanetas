@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/cinza">
+
+   <ListView
+       android:id="@+id/listViewsItens"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:dividerHeight="5dp"
+       />
+
+   <ImageView
+       android:id="@+id/icon_lua"
+       android:layout_width="56dp"
+       android:layout_height="56dp"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentBottom="true"
+       android:layout_margin="16dp"
+       android:elevation="4dp"
+       android:src="@drawable/ic_lua" />
+   <ImageView
+    android:id="@+id/icon_sol"
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="16dp"
+    android:elevation="4dp"
+    android:src="@drawable/ic_sol" />
+</RelativeLayout>
