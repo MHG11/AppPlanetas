@@ -58,32 +58,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        ItemLista item = (ItemLista) parent.getItemAtPosition(position);
-        if (item.getId() == 1){
-            Intent intentMercurio = new Intent(this, Mercurio.class);
-            startActivity(intentMercurio);
-        } else if (item.getId() == 2) {
-            Intent intentVenus = new Intent(this, VenusActivity.class);
-            startActivity(intentVenus);
-        } else if (item.getId() == 3) {
-            Intent intentTerra = new Intent(this, TerraActivity.class);
-            startActivity(intentTerra);
-        } else if (item.getId() == 4) {
-            Intent intentMarte = new Intent(this, MarteActivity.class);
-            startActivity(intentMarte);
-        } else if (item.getId() == 5) {
-            Intent intentJupiter = new Intent(this, JupiterActivity.class);
-            startActivity(intentJupiter);
-        } else if (item.getId() == 6) {
-            Intent intentSaturno = new Intent(this, SaturnoActivity.class);
-            startActivity(intentSaturno);
-        } else if (item.getId() == 7) {
-            Intent intentUrano = new Intent(this, UranoActivity.class);
-            startActivity(intentUrano);
-        } else if (item.getId() == 8) {
-            Intent intentNetuno = new Intent(this, NetunoActivity.class);
-            startActivity(intentNetuno);
-        }
+        String[] nome = getResources().getStringArray(R.array.nome_planetas);
+        String[] descricao = getResources().getStringArray(R.array.descricao_planetas);
+        String[] imagem = getResources().getStringArray(R.array.imagem_planeta);
+
+        String nomePlaneta = nome[position];
+        String descricaoPlaneta = descricao[position];
+        String imagemPlaneta = imagem[position];
+
+        Intent intent = new Intent(MainActivity.this, DetalhesPlanetas.class);
+        intent.putExtra("nomePlaneta", nomePlaneta);
+        intent.putExtra("descricaoPlaneta", descricaoPlaneta);
+        intent.putExtra("imagemPlaneta", imagemPlaneta);
+        startActivity(intent);
+
     }
 
 }

@@ -3,48 +3,47 @@ package com.example.appplanetas;
 public class ModelCalculo {
 
     private double pesoCalculado;
-    private static final double PESO_MERCURIO = 0.38;
-    private static final double PESO_VENUS = 0.90;
-    private static final double PESO_TERRA = 1.0;
-    private static final double PESO_MARTE = 0.38;
-    private static final double PESO_JUPITER = 2.53;
-    private static final double PESO_SATURNO = 1.06;
-    private static final double PESO_URANO = 0.90;
-    private static final double PESO_NETUNO = 1.14;
+    private static final double FATOR_MERCURIO = 0.38;
+    private static final double FATOR_VENUS = 0.90;
+    private static final double FATOR_TERRA = 1.0;
+    private static final double FATOR_MARTE = 0.38;
+    private static final double FATOR_JUPITER = 2.53;
+    private static final double FATOR_SATURNO = 1.06;
+    private static final double FATOR_URANO = 0.90;
+    private static final double FATOR_NETUNO = 1.14;
 
-    public double getPesoCalculado(){
+    public double getPesoCalculado() {
         return pesoCalculado;
     }
 
-    public void setPesoCalculado(double pesoCalculado){
-        this.pesoCalculado = pesoCalculado;
+    public void calcularPesoPlaneta(double peso, String nomePlaneta) {
+        double fator = 1.0; // Fator padrão (Terra)
+        switch (nomePlaneta) {
+            case "Mercúrio":
+                fator = FATOR_MERCURIO;
+                break;
+            case "Vênus":
+                fator = FATOR_VENUS;
+                break;
+            case "Terra":
+                fator = FATOR_TERRA;
+                break;
+            case "Marte":
+                fator = FATOR_MARTE;
+                break;
+            case "Júpiter":
+                fator = FATOR_JUPITER;
+                break;
+            case "Saturno":
+                fator = FATOR_SATURNO;
+                break;
+            case "Urano":
+                fator = FATOR_URANO;
+                break;
+            case "Netuno":
+                fator = FATOR_NETUNO;
+                break;
+        }
+        this.pesoCalculado = peso * fator;
     }
-
-    public void calcularPesoMercurio(double peso){
-        pesoCalculado = peso * PESO_MERCURIO;
-    }
-
-    public void calcularPesoVenus(double peso){
-        pesoCalculado = peso * PESO_VENUS;
-    }
-    public void calcularPesoTerra(double peso){
-        pesoCalculado = peso * PESO_TERRA;
-    }
-    public void calcularPesoMarte(double peso){
-        pesoCalculado = peso * PESO_MARTE;
-    }
-    public void calcularPesoJupiter(double peso){
-        pesoCalculado = peso * PESO_JUPITER;
-    }
-    public void calcularPesoSaturno(double peso){
-        pesoCalculado = peso * PESO_SATURNO;
-    }
-    public void calcularPesoUrano(double peso){
-        pesoCalculado = peso * PESO_URANO;
-    }
-    public void calcularPesoNetuno(double peso){
-        pesoCalculado = peso * PESO_NETUNO;
-    }
-
-
 }

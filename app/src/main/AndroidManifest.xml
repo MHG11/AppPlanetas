@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppPlanetas">
         <activity
+            android:name=".DetalhesPlanetas"
+            android:exported="false" />
+        <activity
             android:name=".LuaActivity"
             android:exported="false" />
         <activity

@@ -4,32 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
+    android:background="@color/cinza"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cinza"
-    android:padding="20dp"
-    tools:context=".NetunoActivity">
+    tools:context=".DetalhesPlanetas">
 
     <ImageView
+        android:id="@+id/imagemPlaneta"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
-        android:src="@drawable/netuno"/>
+        android:layout_height="280dp" />
 
     <TextView
+        android:id="@+id/nomePlaneta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Netuno"
+        android:text=""
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="30dp"/>
+        android:textSize="20dp"/>
 
     <TextView
+        android:id="@+id/descricaoPlaneta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:paddingTop="20dp"
+        android:text=""
+        android:gravity="center"
         android:textColor="@color/black"
-        android:text="Gravidade deste planeta: 11,15m²"/>
+        android:textSize="20dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -37,7 +38,7 @@
         android:textSize="20dp"
         android:paddingTop="10dp"
         android:textColor="@color/black"
-        android:text="Coloque sua massa e descubra seu peso em Netuno:"/>
+        android:text="Coloque sua massa e descubra seu peso neste planeta: "/>
 
     <EditText
         android:id="@+id/peso"
@@ -52,7 +53,7 @@
         android:text="calcular"/>
 
     <ProgressBar
-        android:id="@+id/progressBarNetuno"
+        android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
