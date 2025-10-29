@@ -1,36 +1,4 @@
 <resources>
     <string name="app_name">AppPlanetas</string>
 
-    <string-array name="nome_planetas">
-        <item>Mercúrio</item>
-        <item>Vênus</item>
-        <item>Terra</item>
-        <item>Marte</item>
-        <item>Júpiter</item>
-        <item>Saturno</item>
-        <item>Urano</item>
-        <item>Netuno</item>
-    </string-array>
-
-    <string-array name="descricao_planetas">
-        <item>Gravidade deste planeta: 3,7m²</item>
-        <item>Gravidade deste planeta: 8,9m²</item>
-        <item>Gravidade deste planeta: 9,8m²</item>
-        <item>Gravidade deste planeta: 3,72m²</item>
-        <item>Gravidade deste planeta: 24,8m²</item>
-        <item>Gravidade deste planeta: 10,7m²</item>
-        <item>Gravidade deste planeta: 8,8m²</item>
-        <item>Gravidade deste planeta: 11m²</item>
-    </string-array>
-
-    <string-array name="imagem_planeta">
-        <item>mercurio</item>
-        <item>venus</item>
-        <item>terra</item>
-        <item>marte</item>
-        <item>jupiter</item>
-        <item>saturno</item>
-        <item>urano</item>
-        <item>netuno</item>
-    </string-array>
 </resources>

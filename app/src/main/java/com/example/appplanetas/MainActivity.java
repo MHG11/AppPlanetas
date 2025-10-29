@@ -1,15 +1,12 @@
 package com.example.appplanetas;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
@@ -19,7 +16,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private ListView listView;
     private MeuAdapter meuAdapter;
     private RepositoryItens repositorioItens;
-
     private ImageView iconSol;
     private ImageView iconLua;
 
@@ -58,20 +54,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        String[] nome = getResources().getStringArray(R.array.nome_planetas);
-        String[] descricao = getResources().getStringArray(R.array.descricao_planetas);
-        String[] imagem = getResources().getStringArray(R.array.imagem_planeta);
-
-        String nomePlaneta = nome[position];
-        String descricaoPlaneta = descricao[position];
-        String imagemPlaneta = imagem[position];
-
+        ItemLista itemClicado = meuAdapter.getItem(position);
         Intent intent = new Intent(MainActivity.this, DetalhesPlanetas.class);
-        intent.putExtra("nomePlaneta", nomePlaneta);
-        intent.putExtra("descricaoPlaneta", descricaoPlaneta);
-        intent.putExtra("imagemPlaneta", imagemPlaneta);
-        startActivity(intent);
 
+        intent.putExtra("nomePlaneta", itemClicado.getNome());
+        intent.putExtra("descricaoPlaneta", itemClicado.getDescricao());
+        intent.putExtra("imagemPlaneta", itemClicado.getImagemString());
+
+        startActivity(intent);
     }
 
 }
